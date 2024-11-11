@@ -10,7 +10,7 @@ class ProjectReader:
     def get_project(self):
         # tiedoston merkkijonomuotoinen sisältö
         content = toml.loads(request.urlopen(self._url).read().decode("utf-8"))
-        print(content)
+        #print(content)
         dependent = []
         for item in content["tool"]["poetry"]["dependencies"]:
             dependent.append(item)
@@ -23,5 +23,7 @@ class ProjectReader:
                         content["tool"]["poetry"]["name"], 
                         content["tool"]["poetry"]["description"], 
                         dependent, 
-                        devdep
+                        devdep,
+                        content["tool"]["poetry"]["license"],
+                        content["tool"]["poetry"]["authors"]
                     )
