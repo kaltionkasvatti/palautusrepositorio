@@ -3,10 +3,10 @@ class Counter:
         self._initial_value = initial_value
         self.value = initial_value
 
-    def increase(self):
+    def increment(self):
         self.value = self.value + 1
 
-    def increment(self, amount):
+    def increase(self, amount):
         self.value = self.value + amount
 
     def decrease(self):
