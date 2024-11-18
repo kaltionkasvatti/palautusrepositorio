@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20241118 15:18:30.578" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.12 on linux)" generated="20241118 22:46:18.401" rpa="false" schemaversion="4">
 <suite id="s1" name="Src" source="/home/hannolan/Documents/koulu/ohtu/palautusrepositorio/viikko3/webcounter/src">
 <suite id="s1-s1" name="Tests" source="/home/hannolan/Documents/koulu/ohtu/palautusrepositorio/viikko3/webcounter/src/tests">
 <suite id="s1-s1-s1" name="Increment" source="/home/hannolan/Documents/koulu/ohtu/palautusrepositorio/viikko3/webcounter/src/tests/increment.robot">
@@ -11,10 +11,10 @@
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20241118 15:18:30.672" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x78603b367fd0&gt;</msg>
-<status status="PASS" starttime="20241118 15:18:30.671" endtime="20241118 15:18:30.672"/>
+<msg timestamp="20241118 22:46:18.594" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x72b1d24c3a00&gt;</msg>
+<status status="PASS" starttime="20241118 22:46:18.593" endtime="20241118 22:46:18.594"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:30.670" endtime="20241118 15:18:30.672"/>
+<status status="PASS" starttime="20241118 22:46:18.590" endtime="20241118 22:46:18.594"/>
 </branch>
 <branch type="ELSE IF" condition="$BROWSER == 'firefox'">
 <kw name="Evaluate" library="BuiltIn">
@@ -22,100 +22,100 @@
 <arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="NOT RUN" starttime="20241118 22:46:18.594" endtime="20241118 22:46:18.594"/>
 </kw>
-<status status="NOT RUN" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="NOT RUN" starttime="20241118 22:46:18.594" endtime="20241118 22:46:18.594"/>
 </branch>
-<status status="PASS" starttime="20241118 15:18:30.670" endtime="20241118 15:18:30.672"/>
+<status status="PASS" starttime="20241118 22:46:18.590" endtime="20241118 22:46:18.594"/>
 </if>
 <if>
 <branch type="IF" condition="$HEADLESS == 'true'">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="NOT RUN" starttime="20241118 22:46:18.594" endtime="20241118 22:46:18.594"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="NOT RUN" starttime="20241118 22:46:18.594" endtime="20241118 22:46:18.594"/>
 </kw>
-<status status="NOT RUN" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="NOT RUN" starttime="20241118 22:46:18.594" endtime="20241118 22:46:18.594"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="PASS" starttime="20241118 22:46:18.595" endtime="20241118 22:46:18.595"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="PASS" starttime="20241118 22:46:18.595" endtime="20241118 22:46:18.595"/>
 </branch>
-<status status="PASS" starttime="20241118 15:18:30.672" endtime="20241118 15:18:30.672"/>
+<status status="PASS" starttime="20241118 22:46:18.594" endtime="20241118 22:46:18.595"/>
 </if>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20241118 15:18:30.673" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20241118 15:18:30.672" endtime="20241118 15:18:31.052"/>
+<msg timestamp="20241118 22:46:18.596" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20241118 22:46:18.595" endtime="20241118 22:46:20.146"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:30.670" endtime="20241118 15:18:31.052"/>
+<status status="PASS" starttime="20241118 22:46:18.590" endtime="20241118 22:46:20.146"/>
 </kw>
 <test id="s1-s1-s1-t1" name="At start the counter is zero" line="7">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20241118 15:18:31.053" level="INFO">Opening url 'http://localhost:5001'</msg>
-<status status="PASS" starttime="20241118 15:18:31.053" endtime="20241118 15:18:31.595"/>
+<msg timestamp="20241118 22:46:20.148" level="INFO">Opening url 'http://localhost:5001'</msg>
+<status status="PASS" starttime="20241118 22:46:20.147" endtime="20241118 22:46:20.733"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Laskuri</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20241118 15:18:32.108" level="INFO">Page title is 'Laskuri'.</msg>
-<status status="PASS" starttime="20241118 15:18:31.595" endtime="20241118 15:18:32.109"/>
+<msg timestamp="20241118 22:46:21.249" level="INFO">Page title is 'Laskuri'.</msg>
+<status status="PASS" starttime="20241118 22:46:20.734" endtime="20241118 22:46:21.249"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>nappia painettu 0 kertaa</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20241118 15:18:33.137" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
-<status status="PASS" starttime="20241118 15:18:32.109" endtime="20241118 15:18:33.138"/>
+<msg timestamp="20241118 22:46:22.284" level="INFO">Current page contains text 'nappia painettu 0 kertaa'.</msg>
+<status status="PASS" starttime="20241118 22:46:21.250" endtime="20241118 22:46:22.284"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:31.052" endtime="20241118 15:18:33.138"/>
+<status status="PASS" starttime="20241118 22:46:20.146" endtime="20241118 22:46:22.285"/>
 </test>
 <test id="s1-s1-s1-t2" name="When button pressed twice the counter is two" line="12">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20241118 15:18:33.141" level="INFO">Opening url 'http://localhost:5001'</msg>
-<status status="PASS" starttime="20241118 15:18:33.140" endtime="20241118 15:18:33.664"/>
+<msg timestamp="20241118 22:46:22.287" level="INFO">Opening url 'http://localhost:5001'</msg>
+<status status="PASS" starttime="20241118 22:46:22.287" endtime="20241118 22:46:22.817"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Paina</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20241118 15:18:33.668" level="INFO">Clicking button 'Paina'.</msg>
-<status status="PASS" starttime="20241118 15:18:33.665" endtime="20241118 15:18:35.286"/>
+<msg timestamp="20241118 22:46:22.821" level="INFO">Clicking button 'Paina'.</msg>
+<status status="PASS" starttime="20241118 22:46:22.819" endtime="20241118 22:46:24.480"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Paina</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20241118 15:18:35.289" level="INFO">Clicking button 'Paina'.</msg>
-<status status="PASS" starttime="20241118 15:18:35.287" endtime="20241118 15:18:36.892"/>
+<msg timestamp="20241118 22:46:24.482" level="INFO">Clicking button 'Paina'.</msg>
+<status status="PASS" starttime="20241118 22:46:24.481" endtime="20241118 22:46:26.105"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>nappia painettu 2 kertaa</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20241118 15:18:37.924" level="INFO">Current page contains text 'nappia painettu 2 kertaa'.</msg>
-<status status="PASS" starttime="20241118 15:18:36.893" endtime="20241118 15:18:37.924"/>
+<msg timestamp="20241118 22:46:27.142" level="INFO">Current page contains text 'nappia painettu 2 kertaa'.</msg>
+<status status="PASS" starttime="20241118 22:46:26.107" endtime="20241118 22:46:27.142"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:33.139" endtime="20241118 15:18:37.925"/>
+<status status="PASS" starttime="20241118 22:46:22.286" endtime="20241118 22:46:27.143"/>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20241118 15:18:37.928" endtime="20241118 15:18:38.491"/>
+<status status="PASS" starttime="20241118 22:46:27.146" endtime="20241118 22:46:27.710"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:30.597" endtime="20241118 15:18:38.491"/>
+<status status="PASS" starttime="20241118 22:46:18.421" endtime="20241118 22:46:27.710"/>
 </suite>
 <suite id="s1-s1-s2" name="Reset" source="/home/hannolan/Documents/koulu/ohtu/palautusrepositorio/viikko3/webcounter/src/tests/reset.robot">
 <kw name="Open And Configure Browser" library="resource" type="SETUP">
@@ -126,10 +126,10 @@
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20241118 15:18:38.498" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x78603b3aa500&gt;</msg>
-<status status="PASS" starttime="20241118 15:18:38.498" endtime="20241118 15:18:38.498"/>
+<msg timestamp="20241118 22:46:27.719" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x72b1d25228c0&gt;</msg>
+<status status="PASS" starttime="20241118 22:46:27.719" endtime="20241118 22:46:27.719"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:38.497" endtime="20241118 15:18:38.498"/>
+<status status="PASS" starttime="20241118 22:46:27.718" endtime="20241118 22:46:27.719"/>
 </branch>
 <branch type="ELSE IF" condition="$BROWSER == 'firefox'">
 <kw name="Evaluate" library="BuiltIn">
@@ -137,135 +137,135 @@
 <arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:38.498" endtime="20241118 15:18:38.498"/>
+<status status="NOT RUN" starttime="20241118 22:46:27.719" endtime="20241118 22:46:27.719"/>
 </kw>
-<status status="NOT RUN" starttime="20241118 15:18:38.498" endtime="20241118 15:18:38.498"/>
+<status status="NOT RUN" starttime="20241118 22:46:27.719" endtime="20241118 22:46:27.719"/>
 </branch>
-<status status="PASS" starttime="20241118 15:18:38.497" endtime="20241118 15:18:38.498"/>
+<status status="PASS" starttime="20241118 22:46:27.718" endtime="20241118 22:46:27.719"/>
 </if>
 <if>
 <branch type="IF" condition="$HEADLESS == 'true'">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:38.499" endtime="20241118 15:18:38.499"/>
+<status status="NOT RUN" starttime="20241118 22:46:27.720" endtime="20241118 22:46:27.720"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:38.499" endtime="20241118 15:18:38.499"/>
+<status status="NOT RUN" starttime="20241118 22:46:27.720" endtime="20241118 22:46:27.720"/>
 </kw>
-<status status="NOT RUN" starttime="20241118 15:18:38.498" endtime="20241118 15:18:38.499"/>
+<status status="NOT RUN" starttime="20241118 22:46:27.719" endtime="20241118 22:46:27.720"/>
 </branch>
 <branch type="ELSE">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20241118 15:18:38.499" endtime="20241118 15:18:38.499"/>
+<status status="PASS" starttime="20241118 22:46:27.720" endtime="20241118 22:46:27.721"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:38.499" endtime="20241118 15:18:38.499"/>
+<status status="PASS" starttime="20241118 22:46:27.720" endtime="20241118 22:46:27.721"/>
 </branch>
-<status status="PASS" starttime="20241118 15:18:38.498" endtime="20241118 15:18:38.499"/>
+<status status="PASS" starttime="20241118 22:46:27.719" endtime="20241118 22:46:27.721"/>
 </if>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20241118 15:18:38.500" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20241118 15:18:38.499" endtime="20241118 15:18:38.877"/>
+<msg timestamp="20241118 22:46:27.722" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20241118 22:46:27.721" endtime="20241118 22:46:28.557"/>
 </kw>
-<status status="PASS" starttime="20241118 15:18:38.497" endtime="20241118 15:18:38.877"/>
+<status status="PASS" starttime="20241118 22:46:27.718" endtime="20241118 22:46:28.557"/>
 </kw>
 <test id="s1-s1-s2-t1" name="When counter has a nonzero value and it is reset the value becomes zero" line="7">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>$(HOME_URL)</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20241118 15:18:38.878" level="INFO">Opening url '$(HOME_URL)'</msg>
-<msg timestamp="20241118 15:18:39.481" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20241118 15:18:39.481" level="FAIL">InvalidArgumentException: Message: invalid argument
+<msg timestamp="20241118 22:46:28.559" level="INFO">Opening url '$(HOME_URL)'</msg>
+<msg timestamp="20241118 22:46:29.200" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20241118 22:46:29.201" level="FAIL">InvalidArgumentException: Message: invalid argument
   (Session info: chrome=131.0.6778.69)
 Stacktrace:
-#0 0x5e7e67a9f4ca &lt;unknown&gt;
-#1 0x5e7e675b247d &lt;unknown&gt;
-#2 0x5e7e67599f5f &lt;unknown&gt;
-#3 0x5e7e67598565 &lt;unknown&gt;
-#4 0x5e7e67598c8a &lt;unknown&gt;
-#5 0x5e7e675b4f49 &lt;unknown&gt;
-#6 0x5e7e67644a35 &lt;unknown&gt;
-#7 0x5e7e67625372 &lt;unknown&gt;
-#8 0x5e7e67643de0 &lt;unknown&gt;
-#9 0x5e7e67625113 &lt;unknown&gt;
-#10 0x5e7e675f3be0 &lt;unknown&gt;
-#11 0x5e7e675f4bbe &lt;unknown&gt;
-#12 0x5e7e67a6be4b &lt;unknown&gt;
-#13 0x5e7e67a6fde2 &lt;unknown&gt;
-#14 0x5e7e67a58d2c &lt;unknown&gt;
-#15 0x5e7e67a70957 &lt;unknown&gt;
-#16 0x5e7e67a3e4bf &lt;unknown&gt;
-#17 0x5e7e67a8e348 &lt;unknown&gt;
-#18 0x5e7e67a8e510 &lt;unknown&gt;
-#19 0x5e7e67a9e346 &lt;unknown&gt;
-#20 0x7c97bf494ac3 &lt;unknown&gt;
+#0 0x63b53f00a4ca &lt;unknown&gt;
+#1 0x63b53eb1d47d &lt;unknown&gt;
+#2 0x63b53eb04f5f &lt;unknown&gt;
+#3 0x63b53eb03565 &lt;unknown&gt;
+#4 0x63b53eb03c8a &lt;unknown&gt;
+#5 0x63b53eb1ff49 &lt;unknown&gt;
+#6 0x63b53ebafa35 &lt;unknown&gt;
+#7 0x63b53eb90372 &lt;unknown&gt;
+#8 0x63b53ebaede0 &lt;unknown&gt;
+#9 0x63b53eb90113 &lt;unknown&gt;
+#10 0x63b53eb5ebe0 &lt;unknown&gt;
+#11 0x63b53eb5fbbe &lt;unknown&gt;
+#12 0x63b53efd6e4b &lt;unknown&gt;
+#13 0x63b53efdade2 &lt;unknown&gt;
+#14 0x63b53efc3d2c &lt;unknown&gt;
+#15 0x63b53efdb957 &lt;unknown&gt;
+#16 0x63b53efa94bf &lt;unknown&gt;
+#17 0x63b53eff9348 &lt;unknown&gt;
+#18 0x63b53eff9510 &lt;unknown&gt;
+#19 0x63b53f009346 &lt;unknown&gt;
+#20 0x7417be494ac3 &lt;unknown&gt;
 </msg>
-<status status="FAIL" starttime="20241118 15:18:38.878" endtime="20241118 15:18:39.483"/>
+<status status="FAIL" starttime="20241118 22:46:28.558" endtime="20241118 22:46:29.209"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Paina</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:39.484" endtime="20241118 15:18:39.484"/>
+<status status="NOT RUN" starttime="20241118 22:46:29.210" endtime="20241118 22:46:29.210"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Paina</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:39.484" endtime="20241118 15:18:39.484"/>
+<status status="NOT RUN" starttime="20241118 22:46:29.210" endtime="20241118 22:46:29.211"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Nollaa</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:39.484" endtime="20241118 15:18:39.484"/>
+<status status="NOT RUN" starttime="20241118 22:46:29.211" endtime="20241118 22:46:29.211"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>nappia painettu 0 kertaa</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" starttime="20241118 15:18:39.484" endtime="20241118 15:18:39.485"/>
+<status status="NOT RUN" starttime="20241118 22:46:29.211" endtime="20241118 22:46:29.211"/>
 </kw>
-<status status="FAIL" starttime="20241118 15:18:38.878" endtime="20241118 15:18:39.485">InvalidArgumentException: Message: invalid argument
+<status status="FAIL" starttime="20241118 22:46:28.558" endtime="20241118 22:46:29.212">InvalidArgumentException: Message: invalid argument
   (Session info: chrome=131.0.6778.69)
 Stacktrace:
-#0 0x5e7e67a9f4ca &lt;unknown&gt;
-#1 0x5e7e675b247d &lt;unknown&gt;
-#2 0x5e7e67599f5f &lt;unknown&gt;
-#3 0x5e7e67598565 &lt;unknown&gt;
-#4 0x5e7e67598c8a &lt;unknown&gt;
-#5 0x5e7e675b4f49 &lt;unknown&gt;
-#6 0x5e7e67644a35 &lt;unknown&gt;
-#7 0x5e7e67625372 &lt;unknown&gt;
-#8 0x5e7e67643de0 &lt;unknown&gt;
-#9 0x5e7e67625113 &lt;unknown&gt;
-#10 0x5e7e675f3be0 &lt;unknown&gt;
-#11 0x5e7e675f4bbe &lt;unknown&gt;
-#12 0x5e7e67a6be4b &lt;unknown&gt;
-#13 0x5e7e67a6fde2 &lt;unknown&gt;
-#14 0x5e7e67a58d2c &lt;unknown&gt;
-#15 0x5e7e67a70957 &lt;unknown&gt;
-#16 0x5e7e67a3e4bf &lt;unknown&gt;
-#17 0x5e7e67a8e348 &lt;unknown&gt;
-#18 0x5e7e67a8e510 &lt;unknown&gt;
-#19 0x5e7e67a9e346 &lt;unknown&gt;
-#20 0x7c97bf494ac3 &lt;unknown&gt;
+#0 0x63b53f00a4ca &lt;unknown&gt;
+#1 0x63b53eb1d47d &lt;unknown&gt;
+#2 0x63b53eb04f5f &lt;unknown&gt;
+#3 0x63b53eb03565 &lt;unknown&gt;
+#4 0x63b53eb03c8a &lt;unknown&gt;
+#5 0x63b53eb1ff49 &lt;unknown&gt;
+#6 0x63b53ebafa35 &lt;unknown&gt;
+#7 0x63b53eb90372 &lt;unknown&gt;
+#8 0x63b53ebaede0 &lt;unknown&gt;
+#9 0x63b53eb90113 &lt;unknown&gt;
+#10 0x63b53eb5ebe0 &lt;unknown&gt;
+#11 0x63b53eb5fbbe &lt;unknown&gt;
+#12 0x63b53efd6e4b &lt;unknown&gt;
+#13 0x63b53efdade2 &lt;unknown&gt;
+#14 0x63b53efc3d2c &lt;unknown&gt;
+#15 0x63b53efdb957 &lt;unknown&gt;
+#16 0x63b53efa94bf &lt;unknown&gt;
+#17 0x63b53eff9348 &lt;unknown&gt;
+#18 0x63b53eff9510 &lt;unknown&gt;
+#19 0x63b53f009346 &lt;unknown&gt;
+#20 0x7417be494ac3 &lt;unknown&gt;
 </status>
 </test>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20241118 15:18:39.485" endtime="20241118 15:18:40.045"/>
+<status status="PASS" starttime="20241118 22:46:29.213" endtime="20241118 22:46:29.778"/>
 </kw>
-<status status="FAIL" starttime="20241118 15:18:38.493" endtime="20241118 15:18:40.045"/>
+<status status="FAIL" starttime="20241118 22:46:27.713" endtime="20241118 22:46:29.778"/>
 </suite>
-<status status="FAIL" starttime="20241118 15:18:30.596" endtime="20241118 15:18:40.047"/>
+<status status="FAIL" starttime="20241118 22:46:18.419" endtime="20241118 22:46:29.781"/>
 </suite>
-<status status="FAIL" starttime="20241118 15:18:30.578" endtime="20241118 15:18:40.048"/>
+<status status="FAIL" starttime="20241118 22:46:18.401" endtime="20241118 22:46:29.783"/>
 </suite>
 <statistics>
 <total>
