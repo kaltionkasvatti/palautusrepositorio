@@ -27,5 +27,5 @@ jobs:
         working-directory: ./viikko3
         run: poetry install
       - name: Run robot tests
-        working-directory: ./viikko3
+        working-directory: ./viikko3/webcounter
         run: bash run_robot_tests.sh
